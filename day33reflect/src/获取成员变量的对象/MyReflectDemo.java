@@ -44,31 +44,21 @@ public class MyReflectDemo {
         Field gender = clazz.getField("gender");
         System.out.println(gender);
 
-        System.out.println("=================================");
-
         //5.返回单个成员变量对象
         Field age = clazz.getDeclaredField("age");
         System.out.println(age);
-
-        System.out.println("=================================");
 
         //6.用成员变量的对象获取成员变量的权限修饰符
         int modifiers = age.getModifiers();
         System.out.println(modifiers);
 
-        System.out.println("===============================");
-
         //7.用成员变量的对象获取成员变量的变量名
         String name = age.getName();
         System.out.println(name);
 
-        System.out.println("===============================");
-
         //8.用成员变量的对象获取成员变量的数据类型
         Class<?> type = age.getType();
         System.out.println(type);
-
-        System.out.println("===============================");
 
         //9.用成员变量记录的值
         Student student = new Student("张三",23,"男");
