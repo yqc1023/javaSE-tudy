@@ -29,8 +29,6 @@ public class MyReflectDemo {
 
     */
 
-
-
         //1. 获取class字节码文件对象
         Class clazz = Class.forName("com.itheima.myreflect4.Student");
 
@@ -49,35 +47,28 @@ public class MyReflectDemo {
         // 获取指定的单一方法
         Method m = clazz.getDeclaredMethod("eat", String.class);
         System.out.println(m);
-
         // 获取方法的修饰符
         int modifiers = m.getModifiers();
         System.out.println(modifiers);
-
         // 获取方法的名字
         String name = m.getName();
         System.out.println(name);
-
         // 获取方法的形参
         Parameter[] parameters = m.getParameters();
         for (Parameter parameter : parameters) {
             System.out.println(parameter);
         }
-
         //获取方法的抛出的异常
         Class[] exceptionTypes = m.getExceptionTypes();
         for (Class exceptionType : exceptionTypes) {
             System.out.println(exceptionType);
         }
-
         //方法运行
         /*Method类中用于创建对象的方法
         Object invoke(Object obj, Object... args)：运行方法
         参数一：用obj对象调用该方法
         参数二：调用方法的传递的参数（如果没有就不写）
         返回值：方法的返回值（如果没有就不写）*/
-
-
         Student s = new Student();
         m.setAccessible(true);
         //参数一s：表示方法的调用者
